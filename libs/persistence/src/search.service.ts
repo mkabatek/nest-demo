@@ -28,6 +28,17 @@ export class SearchService {
     return body;
   }
 
+  public async post() {
+    const { body } = await this.esSvc.index({
+      index: 'game-of-thrones',
+      body: {
+        character: 'Ned Stark',
+        quote: 'Winter is coming.',
+      },
+    });
+    return body;
+  }
+
   /**
    * Refresh an index
    * @param index

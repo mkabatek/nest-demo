@@ -13,4 +13,14 @@ export class MyAppController {
   async getHello(): Promise<boolean> {
     return await this.searchService.ping();
   }
+
+  @Get('post')
+  async index(): Promise<any> {
+    return await this.searchService.post();
+  }
+
+  @Get('search')
+  async exists(): Promise<any> {
+    return await this.searchService.indexExists('game-of-thrones');
+  }
 }

@@ -7,7 +7,7 @@ import { ElasticsearchModule } from '@nestjs/elasticsearch';
   imports: [
     ElasticsearchModule.registerAsync({
       useFactory: () => ({
-        node: 'http://fungyproof-es-dev.us-east-1.es.localhost.localstack.cloud:4566',
+        node: 'http://localhost:9200',
       }),
     }),
   ],
